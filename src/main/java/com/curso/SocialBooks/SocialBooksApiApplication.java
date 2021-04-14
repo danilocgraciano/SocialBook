@@ -1,4 +1,4 @@
-package com.curso.SocialBooks;
+package com.curso.socialbooks;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

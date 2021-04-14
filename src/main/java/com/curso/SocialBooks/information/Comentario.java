@@ -1,4 +1,4 @@
-package com.curso.SocialBooks.Informacoes;
+package com.curso.socialbooks.information;
 
 import java.util.Date;
 

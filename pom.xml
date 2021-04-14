@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.curso</groupId>
-	<artifactId>SocialBooks</artifactId>
+	<artifactId>socialbooks</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>SocialBooksAPI</name>
 	<description>Começando com Web Services RESTful e SpringBoot </description>
