@@ -1,20 +1,28 @@
-package com.curso.socialbooks.services;
+package com.curso.socialbooks.service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.curso.socialbooks.domain.Comentario;
+import com.curso.socialbooks.domain.Livro;
 import com.curso.socialbooks.exceptions.LivroException;
-import com.curso.socialbooks.information.Livro;
-import com.curso.socialbooks.repository.LivrosRepository;
+import com.curso.socialbooks.repository.ComentarioRepository;
+import com.curso.socialbooks.repository.LivroRepository;
 
 @Service
-public class LivrosService {
+public class LivroService {
 
 	@Autowired
-	private LivrosRepository livrosRepository;
+	private LivroRepository livrosRepository;
+	
+	@Autowired
+	private ComentarioRepository comentariosRepository;
+
+	private Optional<Livro> livro;
 
 	public List<Livro> List(){
 		return livrosRepository.findAll();
@@ -58,6 +66,21 @@ public class LivrosService {
 		search(livro.getId());
 	}
 	
+	public Comentario commentSave(Long livroId, Comentario comment) {
+		
+		livro = search(livroId);
+		comment.setData(new Date());
+		comment.setLivro(livro.get());
+		
+		//comment.setLivro(livroId);
+		
+		return comentariosRepository.save(comment);
+	}
 	
+	public List<Comentario> commentList(Long livroId){
+		
+		livro = search(livroId);	
+		return livro.get().getComentario();
+	}
 	
 }

@@ -1,4 +1,4 @@
-package com.curso.socialbooks.information;
+package com.curso.socialbooks.domain;
 
 import java.util.Date;
 import java.util.List;
@@ -7,7 +7,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Transient;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 public class Livro {
@@ -16,18 +22,23 @@ public class Livro {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
+	@NotEmpty(message = "Nome não pode estar vazio")
 	private String nome;
 
+	@JsonFormat(pattern = "dd/mm/yyyy")
 	private Date publicacao;
 
 	private String editora;
 
+	@Size(max = 1500)
 	private String resumo;
 
-	@Transient
+	@OneToMany(mappedBy = "livro")
 	private List<Comentario> comentario;
 
-	private String autor;
+	@ManyToOne
+	@JoinColumn(name = "AUTOR")
+	private Autor autor;
 
 	public Livro() {}
 	
@@ -71,10 +82,10 @@ public class Livro {
 	public void setComentario(List<Comentario> comentario) {
 		this.comentario = comentario;
 	}
-	public String getAutor() {
+	public Autor getAutor() {
 		return autor;
 	}
-	public void setAutor(String autor) {
+	public void setAutor(Autor autor) {
 		this.autor = autor;
 	}
 

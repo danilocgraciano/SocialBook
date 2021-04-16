@@ -1,4 +1,4 @@
-package com.curso.socialbooks.information;
+package com.curso.socialbooks.domain;
 
 public class DetailError {
 	
