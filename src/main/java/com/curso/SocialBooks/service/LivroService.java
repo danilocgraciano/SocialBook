@@ -24,7 +24,7 @@ public class LivroService {
 
 	private Optional<Livro> livro;
 
-	public List<Livro> List(){
+	public List<Livro> list(){
 		return livrosRepository.findAll();
 	}
 	
@@ -47,7 +47,7 @@ public class LivroService {
 		
 	}
 	
-	public Livro Delete(Long id) {
+	public Livro delete(Long id) {
 		try {
 			livrosRepository.deleteById(id);
 		} catch (LivroException e) {

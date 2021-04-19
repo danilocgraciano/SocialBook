@@ -17,22 +17,18 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.curso.socialbooks.domain.Autor;
-import com.curso.socialbooks.repository.AutorRepository;
 import com.curso.socialbooks.service.AutorService;
 
 @RestController
 @RequestMapping("/autor")
 public class AutorController {
-
-	@Autowired
-	private AutorRepository autorRepository;
 	
 	@Autowired
 	private AutorService autorService;
 
 	@RequestMapping(method = RequestMethod.GET)
 	public ResponseEntity<List<Autor>> List(){
-		return ResponseEntity.status(HttpStatus.OK).body(autorRepository.findAll());
+		return ResponseEntity.status(HttpStatus.OK).body(autorService.list());
 	}
 
 	@RequestMapping(method = RequestMethod.POST)

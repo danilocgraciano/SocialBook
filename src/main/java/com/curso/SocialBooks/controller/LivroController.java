@@ -34,7 +34,7 @@ public class LivroController {
 
 	@RequestMapping(method = RequestMethod.GET)
 	public ResponseEntity<List<Livro>> list() {
-		return ResponseEntity.status(HttpStatus.OK).body(livrosService.List());
+		return ResponseEntity.status(HttpStatus.OK).body(livrosService.list());
 	}
 	
 	@RequestMapping(method = RequestMethod.POST)
@@ -58,7 +58,7 @@ public class LivroController {
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
 	public ResponseEntity<Void> delete(@PathVariable("id") Long id){
 		
-		livrosService.Delete(id);
+		livrosService.delete(id);
 		return ResponseEntity.noContent().build();
 		
 	}

@@ -5,7 +5,6 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -27,7 +26,7 @@ public class AutorService {
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
-	public Autor save(@RequestBody Autor autor){
+	public Autor save(Autor autor){
 		//autor.setId(Long.valueOf(	10l));
 		//autor.setId(Long.valueOf("10"));
 		//autor.setId("10l");
