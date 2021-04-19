@@ -27,7 +27,7 @@ public class AutorController {
 	private AutorService autorService;
 
 	@RequestMapping(method = RequestMethod.GET)
-	public ResponseEntity<List<Autor>> List(){
+	public ResponseEntity<List<Autor>> list(){
 		return ResponseEntity.status(HttpStatus.OK).body(autorService.list());
 	}
 
