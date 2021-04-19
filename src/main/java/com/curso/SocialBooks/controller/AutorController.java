@@ -39,7 +39,8 @@ public class AutorController {
 	public ResponseEntity<Autor> save(@Valid @RequestBody Autor autor){
 
 		autor = autorService.save(autor);
-		URI uri = ServletUriComponentsBuilder.fromCurrentContextPath().path("/{id}").buildAndExpand(autor.getId()).toUri();
+		URI uri = ServletUriComponentsBuilder.fromCurrentContextPath()
+							.path("/{id}").buildAndExpand(autor.getId()).toUri();
 		return ResponseEntity.created(uri).build();
 		
 	}

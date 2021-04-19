@@ -15,15 +15,20 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 		auth.inMemoryAuthentication().withUser("abc").roles("ADMIN").password("{noop}123").roles("PASSWORD");
 
 	}
-
+	
 	protected void configure(HttpSecurity http) throws Exception {
 
-		http.authorizeRequests().anyRequest().authenticated()
+		http
+		.authorizeRequests()
+//		.antMatchers(HttpMethod.OPTIONS,"/**").permitAll()
+		.anyRequest().authenticated()
 		.and()
 		.httpBasic()
 		.and()
 		.csrf().disable();
 
 	}
+	
+	
 
 }

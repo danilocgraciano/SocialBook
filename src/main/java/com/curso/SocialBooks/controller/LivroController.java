@@ -12,6 +12,7 @@ import org.springframework.http.CacheControl;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,7 +24,7 @@ import com.curso.socialbooks.domain.Comentario;
 import com.curso.socialbooks.domain.Livro;
 import com.curso.socialbooks.service.LivroService;
 
-
+@CrossOrigin(origins = "http://localhost:5500", maxAge = 3600)
 @RestController
 @RequestMapping("/livro")
 public class LivroController {
