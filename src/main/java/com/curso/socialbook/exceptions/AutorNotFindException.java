@@ -1,4 +1,4 @@
-package com.curso.socialbooks.exceptions;
+package com.curso.socialbook.exceptions;
 
 public class AutorNotFindException extends RuntimeException{
 

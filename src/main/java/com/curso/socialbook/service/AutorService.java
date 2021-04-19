@@ -1,4 +1,4 @@
-package com.curso.socialbooks.service;
+package com.curso.socialbook.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -8,10 +8,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.curso.socialbooks.domain.Autor;
-import com.curso.socialbooks.exceptions.AutorException;
-import com.curso.socialbooks.exceptions.AutorNotFindException;
-import com.curso.socialbooks.repository.AutorRepository;
+import com.curso.socialbook.domain.Autor;
+import com.curso.socialbook.exceptions.AutorException;
+import com.curso.socialbook.exceptions.AutorNotFindException;
+import com.curso.socialbook.repository.AutorRepository;
 
 @Service
 public class AutorService {

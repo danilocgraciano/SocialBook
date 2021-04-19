@@ -1,4 +1,4 @@
-package com.curso.socialbooks.config;
+package com.curso.socialbook.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;

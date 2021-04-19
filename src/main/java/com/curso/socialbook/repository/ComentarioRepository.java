@@ -1,8 +1,8 @@
-package com.curso.socialbooks.repository;
+package com.curso.socialbook.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.curso.socialbooks.domain.Comentario;
+import com.curso.socialbook.domain.Comentario;
 
 public interface ComentarioRepository extends JpaRepository<Comentario, Long> {
 

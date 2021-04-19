@@ -1,4 +1,4 @@
-package com.curso.socialbooks.controller;
+package com.curso.socialbook.controller;
 
 import java.net.URI;
 import java.util.List;
@@ -20,9 +20,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.curso.socialbooks.domain.Comentario;
-import com.curso.socialbooks.domain.Livro;
-import com.curso.socialbooks.service.LivroService;
+import com.curso.socialbook.domain.Comentario;
+import com.curso.socialbook.domain.Livro;
+import com.curso.socialbook.service.LivroService;
 
 @CrossOrigin(origins = "http://localhost:5500", maxAge = 3600)
 @RestController

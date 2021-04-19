@@ -1,4 +1,4 @@
-package com.curso.socialbooks.controller;
+package com.curso.socialbook.controller;
 
 import java.net.URI;
 import java.util.List;
@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.curso.socialbooks.domain.Autor;
-import com.curso.socialbooks.service.AutorService;
+import com.curso.socialbook.domain.Autor;
+import com.curso.socialbook.service.AutorService;
 
 @RestController
 @RequestMapping("/autor")

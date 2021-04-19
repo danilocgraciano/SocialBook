@@ -1,4 +1,4 @@
-package com.curso.socialbooks.service;
+package com.curso.socialbook.service;
 
 import java.util.Date;
 import java.util.List;
@@ -7,11 +7,11 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.curso.socialbooks.domain.Comentario;
-import com.curso.socialbooks.domain.Livro;
-import com.curso.socialbooks.exceptions.LivroException;
-import com.curso.socialbooks.repository.ComentarioRepository;
-import com.curso.socialbooks.repository.LivroRepository;
+import com.curso.socialbook.domain.Comentario;
+import com.curso.socialbook.domain.Livro;
+import com.curso.socialbook.exceptions.LivroException;
+import com.curso.socialbook.repository.ComentarioRepository;
+import com.curso.socialbook.repository.LivroRepository;
 
 @Service
 public class LivroService {

@@ -1,4 +1,4 @@
-package com.curso.socialbooks.handler;
+package com.curso.socialbook.handler;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -7,10 +7,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-import com.curso.socialbooks.domain.DetailError;
-import com.curso.socialbooks.exceptions.AutorException;
-import com.curso.socialbooks.exceptions.AutorNotFindException;
-import com.curso.socialbooks.exceptions.LivroException;
+import com.curso.socialbook.domain.DetailError;
+import com.curso.socialbook.exceptions.AutorException;
+import com.curso.socialbook.exceptions.AutorNotFindException;
+import com.curso.socialbook.exceptions.LivroException;
 
 @ControllerAdvice
 public class ResourceExceptionHandler {
