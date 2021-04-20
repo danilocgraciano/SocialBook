@@ -24,7 +24,6 @@ import com.curso.socialbook.domain.Comentario;
 import com.curso.socialbook.domain.Livro;
 import com.curso.socialbook.service.LivroService;
 
-@CrossOrigin(origins = "http://localhost:5500", maxAge = 3600)
 @RestController
 @RequestMapping("/livro")
 public class LivroController {
@@ -32,6 +31,7 @@ public class LivroController {
 	@Autowired
 	private LivroService livrosService;
 
+	@CrossOrigin
 	@RequestMapping(method = RequestMethod.GET)
 	public ResponseEntity<List<Livro>> list() {
 		return ResponseEntity.status(HttpStatus.OK).body(livrosService.list());
